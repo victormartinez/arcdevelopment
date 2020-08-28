@@ -5,6 +5,7 @@ import { ThemeProvider } from '@material-ui/styles';
 import theme from './ui/Theme';
 import Header from '../components/ui/Header';
 import Footer from '../components/ui/Footer';
+import LandingPage from '../components/LandingPage';
 
 function App() {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -15,7 +16,7 @@ function App() {
       <BrowserRouter>
         <Header value={value} setValue={setValue} selectedIndex={selectedIndex} setSelectedIndex={setSelectedIndex} />
         <Switch>
-          <Route exact path="/" component={() => <div>Home</div>} />
+          <Route exact path="/" component={LandingPage} />
           <Route path="/services" component={() => <div>services</div>} />
           <Route path="/customsoftware" component={() => <div>customsoftware</div>} />
           <Route path="/mobileapps" component={() => <div>mobileapps</div>} />
