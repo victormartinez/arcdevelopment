@@ -8,7 +8,7 @@ import Footer from './ui/Footer';
 import LandingPage from './LandingPage';
 import Services from './Services';
 import CustomSoftware from './CustomSoftware';
-
+import MobileApps from './MobileApps';
 
 
 function App() {
@@ -33,7 +33,10 @@ function App() {
             path="/customsoftware"
             render={props => <CustomSoftware {...props} setValue={setValue} setSelectedIndex={setSelectedIndex} />} 
           />
-          <Route path="/mobileapps" component={() => <div>mobileapps</div>} />
+          <Route
+            path="/mobileapps"
+            render={props => <MobileApps {...props} setValue={setValue} setSelectedIndex={setSelectedIndex} />} 
+          />
           <Route path="/websites" component={() => <div>websites</div>} />
           <Route path="/revolution" component={() => <div>revolution</div>} />
           <Route path="/about" component={() => <div>about</div>} />
