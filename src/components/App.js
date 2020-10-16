@@ -10,6 +10,7 @@ import Services from './Services';
 import CustomSoftware from './CustomSoftware';
 import MobileApps from './MobileApps';
 import Websites from './Websites';
+import Revolution from './Revolution';
 
 
 function App() {
@@ -42,7 +43,10 @@ function App() {
             path="/websites" 
             render={props => <Websites {...props} setValue={setValue} setSelectedIndex={setSelectedIndex} />} 
           />
-          <Route path="/revolution" component={() => <div>revolution</div>} />
+          <Route
+            path="/revolution"
+            render={props => <Revolution {...props} setValue={setValue} setSelectedIndex={setSelectedIndex} />}
+          />
           <Route path="/about" component={() => <div>about</div>} />
           <Route path="/contact" component={() => <div>contact</div>} />
         </Switch>
