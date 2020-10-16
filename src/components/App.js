@@ -9,6 +9,7 @@ import LandingPage from './LandingPage';
 import Services from './Services';
 import CustomSoftware from './CustomSoftware';
 import MobileApps from './MobileApps';
+import Websites from './Websites';
 
 
 function App() {
@@ -37,7 +38,10 @@ function App() {
             path="/mobileapps"
             render={props => <MobileApps {...props} setValue={setValue} setSelectedIndex={setSelectedIndex} />} 
           />
-          <Route path="/websites" component={() => <div>websites</div>} />
+          <Route 
+            path="/websites" 
+            render={props => <Websites {...props} setValue={setValue} setSelectedIndex={setSelectedIndex} />} 
+          />
           <Route path="/revolution" component={() => <div>revolution</div>} />
           <Route path="/about" component={() => <div>about</div>} />
           <Route path="/contact" component={() => <div>contact</div>} />
