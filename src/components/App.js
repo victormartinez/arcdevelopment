@@ -11,7 +11,7 @@ import CustomSoftware from './CustomSoftware';
 import MobileApps from './MobileApps';
 import Websites from './Websites';
 import Revolution from './Revolution';
-
+import About from './About';
 
 function App() {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -47,7 +47,10 @@ function App() {
             path="/revolution"
             render={props => <Revolution {...props} setValue={setValue} setSelectedIndex={setSelectedIndex} />}
           />
-          <Route path="/about" component={() => <div>about</div>} />
+          <Route
+            path="/about"
+            render={props => <About {...props} setValue={setValue} setSelectedIndex={setSelectedIndex} />}
+          />
           <Route path="/contact" component={() => <div>contact</div>} />
         </Switch>
         <Footer value={value} setValue={setValue} setSelectedIndex={setSelectedIndex} />
